@@ -1,0 +1,27 @@
+{
+  "name": "hour-long-lunch",
+  "version": "1.0.0",
+  "description": "Hour Long Lunch final project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bentongreen/hour-long-lunch.git"
+  },
+  "keywords": [
+    "hour",
+    "long",
+    "lunch",
+    "final",
+    "project",
+    "food"
+  ],
+  "author": "Bella, Benton, Ryan, Kelsey",
+  "license": "(MIT)",
+  "bugs": {
+    "url": "https://github.com/bentongreen/hour-long-lunch/issues"
+  },
+  "homepage": "https://github.com/bentongreen/hour-long-lunch#readme"
+}
