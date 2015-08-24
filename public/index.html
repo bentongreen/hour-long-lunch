@@ -1,20 +1,56 @@
+<!DOCTYPE html>
+
 <html>
+
 <head>
-	<title>Hour-Long-Lunch</title>
+	<title>Hour Long Lunch</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
 </head>
+
 <body>
-	<h1>Hour-Long-Lunch</h1>
-	 <div>
+
+	<h1>Hour Long Lunch</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About the App</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="martinilunch.html">Leisurely Lunch</a></li>
+    </ul>
+  </nav>
+
+  <div>
+    <iframe src="">
+      Map.
+    </iframe>
+  </div>
+
+
+	 <div><!-- user input table -->
     <table>
       <legend>
         <form id="userinputform">
-          <p>Wait Time
+          <p>What's this Lunch Spot called?
+            <input type="text" id="spotname" />
+          </p>
+          <p>Where is this Lunch Spot?
+            <input type="text" id="spotlocation" />
+          </p>
+          <p>What type of food does this spot have?
+            <select name id="cuisine">
+            <option value="sandwich">Sandwich</option>
+            <option value="thai">Thai</option>
+            <option value="vietnamese">Vietnamese</option>
+            <option value="mediterranean">Mediterranean</option>
+            </select>
+          </p>
+          <p>What's the wait time at this spot?
             <input type="text" id="wait-time" />
           </p>
-          <p>Rating
+          <p>What rating would you give this spot?
             <input type="text" id="rating" />
           </p>
             <input id="sub" type="button" value="Submit" />
@@ -22,7 +58,15 @@
         </form>
       </legend>
     </table>
-  </div>
+  </div><!-- end user input table -->
+
+  <footer>
+    <ul>
+      <li></li>
+    </ul>
+  </footer>
+
 <script src="js/app.js"></script>
 </body>
+
 </html>
