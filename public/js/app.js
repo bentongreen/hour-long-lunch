@@ -4,9 +4,14 @@ $(document).ready(function(){
 	if(localStorage.getItem("login") != "true"){
 		window.location.href = "login.html";
 	}
+  //Event listeners for form input
+  var spotNameValue, spotLocationValue, cuisineValue, ratingValue, waitTimeValue;
 
 // Take data from form
 $('#sub').click(function() {
+  spotNameValue = document.getElementById('spotname').value;
+  spotLocationValue = document.getElementById('spotlocation').value;
+  cuisineValue = document.getElementById('cuisine').value;
   ratingValue = document.getElementById('rating').value;
   waitTimeValue = document.getElementById('wait-time').value;
   ratingValue = parseInt(ratingValue);
@@ -14,15 +19,15 @@ $('#sub').click(function() {
   inputForm.waitTime();
   inputForm.getRating();
   console.log('Button was clicked');
+  console.log(spotNameValue);
+  console.log(spotLocationValue);
+  console.log(cuisineValue);
   console.log(waitTimeValue);
   console.log(ratingValue);
 });
 
 // Constructor
 var InputForm = function() {
-  this.nameValue = ();
-  this.locationValue = ();
-  this.cuisineValue = ()
   this.ratingArray = []; //starts at 0
   this.waitArray = []; //starts at 0
 };
@@ -47,7 +52,8 @@ InputForm.prototype.getRating = function() {
   var ratingSum = 0;
   for(var i = 0; i < this.waitArray.length; i++) {
     ratingSum += this.ratingArray[i];
-  };
+  }
+
   var avgRating = ratingSum/this.ratingArray.length;
   console.log("The sum of all the elements is: " + ratingSum + " The average is: " + avgRating);
   };
