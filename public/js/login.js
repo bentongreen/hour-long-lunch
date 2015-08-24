@@ -1,14 +1,12 @@
 'use strict'
 $(document).ready(function(){
 
-//set valid logins
-localStorage.setItem("username1", "student");
-localStorage.setItem("username2", "faculty");
-localStorage.setItem("username3", "benton");
-localStorage.setItem("username4", "bella");
-localStorage.setItem("username5", "kelsey");
-localStorage.setItem("username6", "ryan");
-localStorage.setItem("password", "codefellows");
+localStorage.setItem("student", "guest");
+localStorage.setItem("faculty", "codefellows");
+localStorage.setItem("benton", "green");
+localStorage.setItem("bella", "idontcare");
+localStorage.setItem("kelsey", "kelseycat");
+localStorage.setItem("ryan", "surpriseme");
 
 	$("#loginButton").click(function(){
 		var username = $('#usernameId').val();
@@ -16,7 +14,7 @@ localStorage.setItem("password", "codefellows");
 		console.log(username);
 		console.log(password);
 
-		if(password === localStorage.getItem("password")){
+		if(password === localStorage.getItem(username)){
 			localStorage.setItem("login", "true");
 			window.location.href = "index.html";
 		}
