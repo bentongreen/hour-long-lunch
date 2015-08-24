@@ -8,6 +8,7 @@ $(document).ready(function(){
 		console.log(password);
 
 		if(password === "codefellows"){
+			localStorage.setItem("login", "true");
 			window.location.href = "index.html";
 		}
 			else{
