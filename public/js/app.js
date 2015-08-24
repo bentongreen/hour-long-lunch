@@ -4,10 +4,6 @@ $(document).ready(function(){
 	if(localStorage.getItem("login") != "true"){
 		window.location.href = "login.html";
 	}
-	
-	// Event listeners for form input
-var ratingValue, waitTimeValue;
-
 
 // Take data from form
 $('#sub').click(function() {
@@ -24,8 +20,11 @@ $('#sub').click(function() {
 
 // Constructor
 var InputForm = function() {
-  this.ratingArray = [] //starts at 0
-  this.waitArray = [] //starts at 0
+  this.nameValue = ();
+  this.locationValue = ();
+  this.cuisineValue = ()
+  this.ratingArray = []; //starts at 0
+  this.waitArray = []; //starts at 0
 };
 
 var inputForm = new InputForm();
