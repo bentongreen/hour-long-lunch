@@ -16,7 +16,7 @@ localStorage.setItem("password", "codefellows");
 		console.log(username);
 		console.log(password);
 
-		if(password === localStorage.getItem("password"){
+		if(password === localStorage.getItem("password")){
 			localStorage.setItem("login", "true");
 			window.location.href = "index.html";
 		}
