@@ -11,10 +11,24 @@
     <table>
       <legend>
         <form id="userinputform">
-          <p>Wait Time
+          <p>What's this Lunch Spot called?
+            <input type="text" id="spotname" />
+          </p>
+          <p>Where is this Lunch Spot?
+            <input type="text" id="spotlocation" />
+          </p>
+          <p>What type of food does this spot have?
+            <select name id="cuisine">
+            <option value="sandwich">Sandwich</option>
+            <option value="thai">Thai</option>
+            <option value="vietnamese">Vietnamese</option>
+            <option value="mediterranean">Mediterranean</option>
+            </select>
+          </p>
+          <p>What's the wait time at this spot?
             <input type="text" id="wait-time" />
           </p>
-          <p>Rating
+          <p>What rating would you give this spot?
             <input type="text" id="rating" />
           </p>
             <input id="sub" type="button" value="Submit" />
