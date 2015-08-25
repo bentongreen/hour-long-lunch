@@ -1,15 +1,24 @@
 body {
   font: 1.5em sans-serif #424242;
   background-color: #D3CEAA;
+  border-right:25px solid #8E001C;
+  border-left:25px solid #8E001C;
+}
+
+#bodyDiv{
+  max-height: 1024px;
+  height: 1200px;
+  border-right:100px solid #8E001C;
+  border-left:100px solid #8E001C;
 }
 
 #loginH1{
 	font-color: #424242;
-	font-size: 2.5em;
+	font-size: 3em;
 	text-align: center;
 	padding-top: 3%;
 	margin-left: 0%;
-	font-family: 'Courier New';
+	font-family: 'Cuprum';
 	font-weight: bold;
 }
 
@@ -60,11 +69,11 @@ background-color: #8E001C;
 
 #signupH3{
 	font-color: #424242;
-	font-size: 1.5em;
+	font-size: 2em;
 	text-align: center;
 	padding-top: 3%;
 	margin-left: 0%;
-	font-family: 'Courier New';
+	font-family: 'Cuprum';
 	font-weight: bold;
 }
 
