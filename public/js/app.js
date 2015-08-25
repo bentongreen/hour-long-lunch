@@ -9,16 +9,16 @@ $(document).ready(function(){
 
 // Take data from form
 $('#sub').click(function() {
-  spotNameValue = document.getElementById('spotname').value;
-  spotLocationValue = document.getElementById('spotlocation').value;
-  cuisineValue = document.getElementById('cuisine').value;
-  ratingValue = document.getElementById('rating').value;
-  waitTimeValue = document.getElementById('wait-time').value;
+  spotNameValue = $('#spotname').val();
+  spotLocationValue = $('#spotlocation').val();
+  cuisineValue = $('#cuisine').val();
+  ratingValue = $('#rating').val();
+  waitTimeValue = $('#wait-time').val();
   ratingValue = parseInt(ratingValue);
   waitTimeValue = parseInt(waitTimeValue);
   inputForm.waitTime();
   inputForm.getRating();
-  $('#unorderedList').append("<p>"+ spotNameValue +"</p>");
+  $('#unorderedList').append("<p>Test</p>"); //Test line
   console.log('Button was clicked');
   console.log(spotNameValue);
   console.log(spotLocationValue);
@@ -58,7 +58,5 @@ InputForm.prototype.getRating = function() {
   var avgRating = ratingSum/this.ratingArray.length;
   console.log("The sum of all the elements is: " + ratingSum + " The average is: " + avgRating);
   };
-
-
 
 });
