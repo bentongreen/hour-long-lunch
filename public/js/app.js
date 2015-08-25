@@ -5,12 +5,13 @@ $(document).ready(function(){
 		window.location.href = "login.html";
 	}
   //Event listeners for form input
-  var spotNameValue, spotLocationValue, cuisineValue, ratingValue, waitTimeValue;
+  var spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue;
 
 // Take data from form
 $('#sub').click(function() {
   spotNameValue = $('#spotname').val();
-  spotLocationValue = $('#spotlocation').val();
+  spotStreetValue = $('#spotstreet').val();
+  spotCrossValue = $('#spotcross').val();
   cuisineValue = $('#cuisine').val();
   ratingValue = $('#rating').val();
   waitTimeValue = $('#wait-time').val();
@@ -21,7 +22,8 @@ $('#sub').click(function() {
   $('#unorderedList').append("<p>Test</p>"); //Test line
   console.log('Button was clicked');
   console.log(spotNameValue);
-  console.log(spotLocationValue);
+  console.log(spotStreetValue);
+  console.log(spotCrossValue);
   console.log(cuisineValue);
   console.log(waitTimeValue);
   console.log(ratingValue);
