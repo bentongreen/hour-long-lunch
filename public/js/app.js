@@ -18,6 +18,7 @@ $('#sub').click(function() {
   waitTimeValue = parseInt(waitTimeValue);
   inputForm.waitTime();
   inputForm.getRating();
+  $('#unorderedList').append("<p>"+ spotNameValue +"</p>");
   console.log('Button was clicked');
   console.log(spotNameValue);
   console.log(spotLocationValue);
@@ -57,5 +58,7 @@ InputForm.prototype.getRating = function() {
   var avgRating = ratingSum/this.ratingArray.length;
   console.log("The sum of all the elements is: " + ratingSum + " The average is: " + avgRating);
   };
+
+
 
 });
