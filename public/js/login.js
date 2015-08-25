@@ -1,6 +1,7 @@
 'use strict'
 $(document).ready(function(){
 
+localStorage.setItem("mrdarcy", "janeausten")
 localStorage.setItem("student", "guest");
 localStorage.setItem("faculty", "codefellows");
 localStorage.setItem("benton", "green");
@@ -23,5 +24,19 @@ localStorage.setItem("ryan", "surpriseme");
 			}
 	});
 
+	$("#submitButton").click(function(){
+		var username2 = $('#newUsername').val();
+		var password2 = $('#newPassword').val();
+		console.log(username2);
+		console.log(password2);
+
+		localStorage.setItem(username2, password2);
+
+		if(password2 === localStorage.getItem(username2)){
+			localStorage.setItem("login", "true");
+			window.location.href = "index.html";
+		}
+
+	});
 
 });
