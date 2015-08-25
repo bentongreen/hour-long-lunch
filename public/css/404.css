@@ -1,0 +1,304 @@
+/*--Original animaion desgin by kescoe on codepen.io http://codepen.io/kescoe/pen/IDaxf--*/
+html{
+background-color: #D3CEAA;
+}
+
+.h1message{
+font-size: 2em;
+font-color: #424242;
+font-weight: heavy;
+font-family: "Courier New";
+float: right;
+margin-top: 3em;
+padding-left: 35%;
+margin-right: 15%;
+}
+
+#base, #window,#window2, #text,#bumper, #window3, #list1, #list2, #cone, #cream,#slide_window2 {
+/*animation*/
+-webkit-animation:bounce .7s infinite;
+   -moz-animation:bounce .7s infinite;
+    -ms-animation:bounce .7s infinite;
+     -o-animation:bounce .7s infinite;
+        animation:bounce .7s infinite;
+}
+@keyframes bounce{
+0% {top:20px;}
+100% {top:25px;}
+}
+@-webkit-keyframes bounce{
+0% {top:20px;}
+100% {top:25px;}
+}
+@-moz-keyframes bounce{
+0% {top:20px;}
+100% {top:25px;}
+}
+#wheel1, #wheel2{
+/*animation*/
+/* -webkit-animation:spin 0.7s infinite linear;
+   -moz-animation:spin 0.7s infinite linear;
+    -ms-animation:spin 0.7s infinite linear;
+     -o-animation:spin 0.7s infinite linear; */
+        animation:spin 0.7s infinite linear;
+}
+@keyframes spin{
+0% {transform: rotate(0deg);}
+100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes spin{
+0% {transform: rotate(0deg);}
+100% {transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+0% {transform: rotate(0deg);}
+100% {transform: rotate(360deg);}
+}
+#food_truck{
+
+}
+#base{
+height:13em;
+width:23em;
+background-color:white;
+position:absolute;
+margin-left:16em;
+margin-top:15em;
+/*border-radius*/
+-webkit-border-radius:5px;
+   -moz-border-radius:5px;
+        border-radius:5px;
+}
+#base_sq{
+height:5em; 
+width:4em;
+background-color:white;
+position:absolute;
+margin-left:23em;
+margin-top:7em;
+border-radius: 5px;
+}
+#base_rec{
+width:0;
+height:0;
+border-left:50px solid transparent;
+border-right:49px solid transparent;
+border-bottom:100px solid white;
+margin-left:19em;
+}
+#base_rec2{
+width:0;
+height:0;
+border-bottom:40px solid white;
+border-right:80px solid transparent;
+position:absolute;
+margin-left:22em;
+margin-top:-1.7em;
+}
+#wheel1{
+width:7em;
+height:7em;
+/*border-radius*/
+-webkit-border-radius:4em;
+   -moz-border-radius:4em;
+        border-radius:4em;
+background-color: #D3CEAA;
+position:absolute;
+margin-left:34em;
+margin-top:24em;
+}
+#wheel2{
+width:7em;
+height:7em;
+/*border-radius*/
+-webkit-border-radius:4em;
+   -moz-border-radius:4em;
+        border-radius:4em;
+background-color: #D3CEAA;
+position:absolute;
+margin-left:19em;
+margin-top:24em;
+}
+#wheel_seg1{
+/*linear-gradient*/
+background:-webkit-gradient(linear,0 50%,100% 50%,from(black),color-stop(black,0.33),color-stop(gray,0.67),to(black));
+background:-webkit-linear-gradient(0deg,black, black ,gray, black);
+background:   -moz-linear-gradient(0deg,black, black ,gray, black);
+background:     -o-linear-gradient(0deg,black, black ,gray, black);
+background:        linear-gradient(0deg,black, black ,gray, black);
+height:6em;
+width:6em;
+/*border-radius*/
+-webkit-border-radius:4em;
+   -moz-border-radius:4em;
+        border-radius:4em;
+margin-left:8px;
+margin-top:8px;
+position:absolute;
+}
+#wheel_seg2{
+/*linear-gradient*/
+background:-webkit-gradient(linear,0 50%,100% 50%,from(black),color-stop(black,0.33),color-stop(gray,0.67),to(black));
+background:-webkit-linear-gradient(0deg,black, black,gray, black);
+background:   -moz-linear-gradient(0deg,black, black,gray, black);
+background:     -o-linear-gradient(0deg,black, black,gray, black);
+background:        linear-gradient(0deg,black, black,gray, black);
+height:6em;
+width:6em;
+/*border-radius*/
+-webkit-border-radius:4em;
+   -moz-border-radius:4em;
+        border-radius:4em;
+margin-left:8px;
+margin-top:8px;
+position:absolute;
+}
+#wheel_ring2{
+border:solid white 5px;
+height:2.5em;
+width:2.5em;
+/*border-radius*/
+-webkit-border-radius:4em;
+   -moz-border-radius:4em;
+        border-radius:4em;
+margin-left:2em;
+margin-top:2em;
+position:absolute;
+}
+#wheel_ring1{
+border:solid white 5px;
+height:2.5em;
+width:2.5em;
+/*border-radius*/
+-webkit-border-radius:4em;
+   -moz-border-radius:4em;
+        border-radius:4em;
+margin-left:2em;
+margin-top:2em;
+position:absolute;
+}
+#window{
+width:55px;
+height:60px;
+/*transform*/
+-webkit-transform:skew(22deg);
+   -moz-transform:skew(22deg);
+    -ms-transform:skew(22deg);
+     -o-transform:skew(22deg);
+        transform:skew(22deg);
+/*linear-gradient*/
+background:-webkit-gradient(linear,0 50%,100% 50%,from(lightblue),color-stop(silver,0.5),to(white));
+background:-webkit-linear-gradient(0deg,lightblue,silver, white);
+background:   -moz-linear-gradient(0deg,lightblue,silver, white);
+background:     -o-linear-gradient(0deg,lightblue,silver, white);
+background:        linear-gradient(0deg,lightblue,silver, white);
+position:absolute;
+margin-top:17em;
+margin-left:35em;
+border:solid grey 2px;
+}
+#window2{
+width:115px;
+height:75.5px;
+/*linear-gradient*/
+background:-webkit-gradient(linear,0 50%,100% 50%,from(lightblue),color-stop(silver,0.5),to(white));
+background:-webkit-linear-gradient(0deg,lightblue,silver, white);
+background:   -moz-linear-gradient(0deg,lightblue,silver, white);
+background:     -o-linear-gradient(0deg,lightblue,silver, white);
+background:        linear-gradient(0deg,lightblue,silver, white);
+position:absolute;
+margin-top:17em;
+margin-left:25.5em;
+border:solid grey 2px;
+}
+#slide_window2{
+width:59px;
+height:75.5px;
+/*linear-gradient*/
+background:-webkit-gradient(linear,0 50%,100% 50%,from(lightblue),color-stop(silver,0.5),to(white));
+background:-webkit-linear-gradient(0deg,lightblue,silver,grey, white);
+background:   -moz-linear-gradient(0deg,lightblue,silver,grey, white);
+background:     -o-linear-gradient(0deg,lightblue,silver,grey, white);
+background:        linear-gradient(0deg,lightblue,silver,grey, white);
+position:absolute;
+margin-top:17em;
+margin-left:25.5em;
+border:solid grey 2px;
+}
+p{
+margin-top:14.5em;
+margin-left:15.7em;
+position:absolute;
+font-family:verdana;
+font-size:18px;
+color:red;
+}
+#list1{
+width:8em;
+height:5em;
+margin-left:17em;
+margin-top:17em;
+position:absolute;
+}
+#list2{
+width:7em;
+height:5em;
+margin-left:26.4em;
+margin-top:22em;
+position:absolute;
+}
+#window3{
+width:4em;
+height:5em;
+margin-left:25.5em;
+margin-top:17em;
+position:absolute;
+background-image: url("http://www.imbecile.me/wp-content/uploads/2011/04/terrified-cat-looks-out-car-window.jpg");
+  background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
+#shadow{
+height:1em;
+width:27em;
+/*border-radius*/
+-webkit-border-radius:30px;
+   -moz-border-radius:30px;
+        border-radius:30px;
+background-color:black;
+margin-left:16em;
+margin-top:30em;
+opacity:0.6;
+position:absolute;
+}
+#bumper{
+height:15px;
+width:20px;
+background-color:grey;
+position:absolute;
+margin-top: 26.1em;
+margin-left: 42em;
+position:absolute;  
+}
+#bumper:after
+{ 
+  content:"";
+  height:30px;
+  width:10px;
+  background-color:grey;
+  margin-left: -26.4em;
+  margin-top: 2px ;
+  position:absolute; 
+}
+#stripe{
+  background-color:#202020;
+  height:1em;
+  width: 19em;
+  position:absolute;
+  margin-top:6em;
+}
+#food_truck{
+  margin-left:-200px;
+  margin-top:-200px;
+  position:absolute;
+}
