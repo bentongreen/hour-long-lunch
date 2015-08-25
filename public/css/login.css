@@ -5,10 +5,10 @@ body {
 
 #loginH1{
 	font-color: #424242;
-	font-size: 1.5em;
+	font-size: 2.5em;
 	text-align: center;
 	padding-top: 3%;
-	margin-left: -2%;
+	margin-left: 0%;
 	font-family: 'Courier New';
 	font-weight: bold;
 }
@@ -51,9 +51,64 @@ body {
 	line-height: 48px;
 	text-align: center;
 	text-transform: uppercase;
-	width: 204px;
+	width: 240px;
 }
 
 #login input[type="button"]:hover{
+background-color: #8E001C;
+}
+
+#signupH3{
+	font-color: #424242;
+	font-size: 1.5em;
+	text-align: center;
+	padding-top: 3%;
+	margin-left: 0%;
+	font-family: 'Courier New';
+	font-weight: bold;
+}
+
+#signup {
+	margin: 50px auto;
+	width: 242px;
+}
+
+#signup  input {
+	border: none;
+	height: 48px;
+	outline: none;
+}
+
+#signup  input[type="text"] {
+	border-top: 1px solid;
+	border-right: 1px solid;
+	border-left: 1px solid;
+	border-radius: 5px 5px 0 0;
+	padding-left: 36px;
+	width: 204px;
+}
+
+#signup  input[type="password"] {
+	border-top: 1px solid;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+	border-left: 1px solid;
+	border-radius: 0 0 5px 5px;
+	margin-bottom: 20px;
+	padding-left: 36px;
+	width: 204px;
+}
+
+#signup  input[type="button"] {
+	border: 1px solid;
+	border-radius: 5px;
+	font-weight: bold;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 240px;
+}
+
+#signup  input[type="button"]:hover{
 background-color: #8E001C;
 }
