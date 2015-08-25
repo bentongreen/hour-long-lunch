@@ -26,13 +26,81 @@ h6 { }
 p { }
 div { }
 
-a:link {
-				color: DarkGrey;
-				text-decoration: none;}
-			a:visited {
-				color: black;}
-			a:hover {
-				color: LightGray;
-				text-decoration: underline;}
-			a:active {
-				color: maroon;}
+ul a:link {
+	color: white;
+	text-decoration: none;
+}
+ul a:visited {
+	color: white;
+}
+ul a:hover {
+	color: LightGray;
+	text-decoration: underline;
+}
+ul a:active {
+	color: maroon;
+}
+
+/* button styles */
+
+#sub {
+ -webkit-border-radius: 28;
+ -moz-border-radius: 28;
+ border-radius: 28px;
+ font-family: Arial;
+ color: #ffffff ;
+ font-size: 20px;
+ background: #000000 ;
+ padding: 10px 20px 10px 20px;
+ border: solid #f00909  5px;
+ text-decoration: none;
+}
+
+#sub:hover {
+ background: #707375 ;
+ text-decoration: none;
+}
+
+input {
+    font size: 120%;
+    color: #000000;
+    background-color: #fff;
+    border: 1px solid #f00909;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    background-repeat: no-repeat;;
+    background-position: 8px 9px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input: focus, input: hover {
+    background-color: #fff ;
+    border: 1px solid #f00909;
+}
+
+#userinputform{
+    width: 400px;
+    margin: 20px;
+    border: 2px solid #f00909;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    /*display: block;*/
+   /* height: ;*/
+}
+
+.style-select select {
+  background: #fff;
+  border: 1px solid #f00909;
+  width: 150px;
+  padding: 5px;
+  font-size: 14px;
+  color: #000;
+  line-height: 1;
+  border-radius: 5px;
+  height: 34px;
+/*  -webkit-appearance: none;*/
+ }
+
