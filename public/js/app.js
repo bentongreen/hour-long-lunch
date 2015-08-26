@@ -5,7 +5,7 @@ $(document).ready(function(){
 		window.location.href = "login.html";
 	}
   //Event listeners for form input
-  var spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue;
+  var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
   var storageArray = new Array();
 
   if(localStorage["storageArray"] == undefined){
@@ -30,8 +30,28 @@ $('#sub').click(function() {
   waitTimeValue = $('#wait-time').val();
   ratingValue = parseFloat(ratingValue).toFixed(2);
   waitTimeValue = parseInt(waitTimeValue);
-  //linkValue to be generated from function that get a google maps location from street names
-  linkValue = '<a href="http://www.google.com">See on map!</a>';
+
+    //-----------------------------linkValue to be generated from function that get a google maps location from street names ------------------------------------------------------
+      var geocoder;
+      var streetAddress = spotStreetValue + ", Seattle, WA, 98109, USA";
+      geocoder = new google.maps.Geocoder();
+      geocoder.geocode( {'address': streetAddress},
+          function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+              firstLoc = results[0].geometry.location;
+              console.log("Firstloc: " + firstLoc);
+              firstLoc = JSON.stringify(firstLoc);
+              firstLoc = firstLoc.replace("(", "");
+              firstLoc = firstLoc.replace(")", ""); 
+            } 
+          }
+        );
+
+  //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+  linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
+
+
   inputForm.waitTime();
   inputForm.getRating();
 
@@ -55,6 +75,7 @@ $('#sub').click(function() {
   //console.log(waitTimeValue);
   //console.log(ratingValue);
 });
+
 
 // Constructor
 var InputForm = function() {
