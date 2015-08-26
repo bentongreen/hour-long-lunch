@@ -8,6 +8,10 @@ $(document).ready(function(){
   var spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue;
   var storageArray = new Array();
 
+  if(localStorage["storageArray"] == undefined){
+   localStorage["storageArray"] = JSON.stringify(storageArray);
+ }
+
   if(localStorage.getItem("login") === "true"){
   var storedArray = JSON.parse(localStorage["storageArray"]);
   for(var i = 0; i < storedArray.length; i++)
