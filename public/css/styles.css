@@ -3,7 +3,13 @@
 -Type
 -Links
 -Buttons
--Forms*/
+-Forms
+-Media Queries
+
+### Colors ####
+medium codefellows red #CF3328
+
+*/
 
 
 body {
@@ -15,16 +21,27 @@ body {
 
 h1 {
 	font-family: 'Cuprum', sans-serif;
-	color: red;
+	color: #CF3328;
 }
 
 h2 { }
-h3 { }
+h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+ }
+
 h5 { }
 h6 { }
 
 p { }
 div { }
+
+li{
+  text-decoration: none;
+  list-style: none;
+  display: inline ;
+}
 
 ul a:link {
 	color: white;
@@ -79,17 +96,16 @@ input: focus, input: hover {
     border: 1px solid #f00909;
 }
 
-#userinputform{
-    width: 400px;
+/*#userinputform{
+    width: 100%;
     margin: 20px;
     border: 2px solid #f00909;
     border-radius: 10px;
     padding: 20px;
     text-align: left;
     font-size: 16px;
-    /*display: block;*/
-   /* height: ;*/
-}
+    display: block;
+}*/
 
 .style-select select {
   background: #fff;
@@ -103,3 +119,7 @@ input: focus, input: hover {
   height: 34px;
 /*  -webkit-appearance: none;*/
  }
+
+@media only screen and (max-width: 750px){
+
+}
