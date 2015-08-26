@@ -5,7 +5,16 @@ $(document).ready(function(){
 		window.location.href = "login.html";
 	}
   //Event listeners for form input
-  var spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue;
+  var spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue;
+  var storageArray = new Array();
+
+  if(localStorage.getItem("login") === "true"){
+  var storedArray = JSON.parse(localStorage["storageArray"]);
+  for(var i = 0; i < storedArray.length; i++)
+  {
+    $('#unorderedList').append(storedArray[i]);
+  }
+ } 
 
 // Take data from form
 $('#sub').click(function() {
@@ -15,18 +24,32 @@ $('#sub').click(function() {
   cuisineValue = $('#cuisine').val();
   ratingValue = $('#rating').val();
   waitTimeValue = $('#wait-time').val();
-  ratingValue = parseInt(ratingValue);
+  ratingValue = parseFloat(ratingValue).toFixed(2);
   waitTimeValue = parseInt(waitTimeValue);
+  //linkValue to be generated from function that get a google maps location from street names
+  linkValue = '<a href="http://www.google.com">See on map!</a>';
   inputForm.waitTime();
   inputForm.getRating();
-  $('#unorderedList').append("<p>Test</p>"); //Test line
-  console.log('Button was clicked');
-  console.log(spotNameValue);
-  console.log(spotStreetValue);
-  console.log(spotCrossValue);
-  console.log(cuisineValue);
-  console.log(waitTimeValue);
-  console.log(ratingValue);
+
+   //appends user submissons to unordered list of added locations
+   var liString = "<li>" + spotNameValue + " - " + spotStreetValue + " - " + spotCrossValue + " - " + cuisineValue + " - " + waitTimeValue + " - " + ratingValue + " - " + linkValue + "</li>";
+   JSON.stringify(liString);
+   storageArray.push(liString);
+   localStorage["storageArray"] = JSON.stringify(storageArray);
+   var storedArray = JSON.parse(localStorage["storageArray"]);
+
+  for(var i = 0; i < storageArray.length; i++)
+  {
+    $('#unorderedList').append(storedArray[i]);
+  }
+
+  //console.log('Button was clicked');
+  //console.log(spotNameValue);
+  //console.log(spotStreetValue);
+  //console.log(spotCrossValue);
+  //console.log(cuisineValue);
+  //console.log(waitTimeValue);
+  //console.log(ratingValue);
 });
 
 // Constructor
