@@ -4,33 +4,54 @@
 
 <head>
 	<title>Hour Long Lunch</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/skeleton.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
   <link href='https://fonts.googleapis.com/css?family=Cuprum:400,700' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
 </head>
 
 <body>
 
-	<h1>Hour Long Lunch</h1>
+  <div class="section">
+    <div class="row">
+	     <h1>Hour Long Lunch</h1>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="about.html">About the App</a></li>
-      <li><a href="aboutus.html">About Us</a></li>
-      <li><a href="martinilunch.html">Leisurely Lunch</a></li>
-    </ul>
-  </nav>
+        <nav>
+          <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About the App</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="martinilunch.html">Leisurely Lunch</a></li>
+          </ul>
+        </nav>
 
-  <div>
-    <iframe src="https://www.google.com/maps/d/embed?mid=zhY0g19z8b_E.kjP6UzhJcjcI" width="640" height="480"></iframe>
-	 <div><!-- user input table -->
+    </div><!--end row-->
+  </div><!-- end section-->
 
-      <legend class="input-legend">
+  <div class="section hero">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+    <iframe src="https://www.google.com/maps/d/embed?mid=zhY0g19z8b_E.kjP6UzhJcjcI" width="100%" height="480"></iframe>
+        </div><!-- end twelve columns -->
+      </div><!-- end row -->
+    </div><!-- end container -->
+  </div><!--  end section hero -->
+
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="six columns">
+
         <form id="userinputform">
-
+          <h3>Want to add a new lunch spot?</h3>
           <p>What's this Lunch Spot called?
             <input type="text" id="spotname" />
           </p>
@@ -63,8 +84,10 @@
             <input id="sub" type="button" value="Submit"/>
           </p>
         </form>
-
-  </div><!-- end user input table -->
+        </div><!--end six columns-->
+      </div><!-- end row -->
+    </div><!-- end container -->
+  </div><!-- end section -->
 
   <footer>
     <ul id="unorderedList">
