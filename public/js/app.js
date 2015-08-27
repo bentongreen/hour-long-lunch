@@ -1,9 +1,9 @@
 'use strict';
 $(document).ready(function(){
 
-	if(localStorage.getItem('login') != 'true'){
-		window.location.href = 'login.html';
-	}
+  if(localStorage.getItem('login') != 'true'){
+    window.location.href = 'login.html';
+  }
   //Event listeners for form input
   var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, dayValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
   var storageArray = new Array();
@@ -31,26 +31,29 @@ $('#sub').click(function() {
   ratingValue = parseFloat(ratingValue).toFixed(2);
   waitTimeValue = parseInt(waitTimeValue);
 
-    //-----------------------------linkValue to be generated from function that get a google maps location from street names ------------------------------------------------------
+//-----------------------------linkValue to be generated from function that get a google maps location from street names ------------------------------------------------------
       var geocoder;
-      var streetAddress = spotStreetValue + ', Seattle, WA, 98109, USA';
+      var firstLoc;
+      var streetAddress = spotStreetValue + ", Seattle, WA, 98109, USA";
       geocoder = new google.maps.Geocoder();
       geocoder.geocode( { 'address': streetAddress },
           function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
               firstLoc = results[0].geometry.location;
+              console.log(firstLoc);
               console.log('Firstloc: ' + firstLoc);
               firstLoc = JSON.stringify(firstLoc);
-              firstLoc = firstLoc.replace('(', '');
-              firstLoc = firstLoc.replace(')', '');
-            }
-          }
-        );
+              firstLoc = firstLoc.replace('(', '')
+              firstLoc = firstLoc.replace(')', ''); 
+        });
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+//while(firstLoc == undefined){
+//              console.log("in while loop");
+//            }
+//firstLoc = JSON.stringify(firstLoc);
+//firstLoc = firstLoc.replace("(", "");
+// firstLoc = firstLoc.replace(")", ""); 
 
-  //-----------------------------------------------------------------------------------------------------------------------------------------------
-
-  linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
-
+linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
 
   inputForm.waitTime();
   inputForm.getRating();
