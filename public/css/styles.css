@@ -82,6 +82,7 @@ div { }
 
 /* -----------------button styles ----------*/
 
+
 /* ----------- Martini Lunch Styles --------*/
 .martini-content{
   margin: 2em auto 2em auto;
@@ -102,6 +103,21 @@ div { }
 .martini-content a:hover{
   color: #a42820;
   text-decoration: underline;
+}
+
+.martini-head{
+  text-align: left;
+  padding-left: 30px;
+}
+
+/* --------------- About Us Styles ----------*/
+.columns img{
+  margin: 0 auto 2em auto;
+}
+
+.container h3{
+  font-size: 2em;
+  color: #d94338;
 }
 
 /* -------------- Table Styles -------------*/
