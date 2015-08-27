@@ -39,20 +39,22 @@ $('#sub').click(function() {
       geocoder.geocode( { 'address': streetAddress },
           function(results, status) {
               firstLoc = results[0].geometry.location;
-              console.log(firstLoc);
-              console.log('Firstloc: ' + firstLoc);
               firstLoc = JSON.stringify(firstLoc);
               firstLoc = firstLoc.replace('(', '')
               firstLoc = firstLoc.replace(')', ''); 
-        });
+              firstLoc = firstLoc.replace('{', ''); 
+              firstLoc = firstLoc.replace('}', ''); 
+              firstLoc = firstLoc.replace('G', ''); 
+              firstLoc = firstLoc.replace('K', ''); 
+              firstLoc = firstLoc.replace('"', ''); 
+              firstLoc = firstLoc.replace('"', ''); 
+              firstLoc = firstLoc.replace('"', ''); 
+              firstLoc = firstLoc.replace('"', ''); 
+              firstLoc = firstLoc.replace(':', ''); 
+              firstLoc = firstLoc.replace(':', ''); 
+        
 //-----------------------------------------------------------------------------------------------------------------------------------------------
-//while(firstLoc == undefined){
-//              console.log("in while loop");
-//            }
-//firstLoc = JSON.stringify(firstLoc);
-//firstLoc = firstLoc.replace("(", "");
-// firstLoc = firstLoc.replace(")", ""); 
-
+console.log(firstLoc);
 linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
 
   inputForm.waitTime();
@@ -76,6 +78,7 @@ linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map
   //console.log(cuisineValue);
   //console.log(waitTimeValue);
   //console.log(ratingValue);
+  });
 });
 
 
@@ -95,7 +98,7 @@ InputForm.prototype.waitTime = function() {
     waitSum += this.waitArray[i];
 };
   var waitAvg = waitSum / this.waitArray.length;
-  console.log('The sum of all the elements is: ' + waitSum + ' The average is: ' + waitAvg);
+  //console.log('The sum of all the elements is: ' + waitSum + ' The average is: ' + waitAvg);
 };
 
 // Function for averaging user input of score 1-5
@@ -107,6 +110,6 @@ InputForm.prototype.getRating = function() {
   }
 
   var avgRating = ratingSum / this.ratingArray.length;
-  console.log('The sum of all the elements is: ' + ratingSum + ' The average is: ' + avgRating);
+  //console.log('The sum of all the elements is: ' + ratingSum + ' The average is: ' + avgRating);
   };
 });
