@@ -6,8 +6,13 @@
 -Forms
 -Media Queries
 
-### Colors ####
+ ------------ Colors ------------------
 medium codefellows red #CF3328
+lighter cf red         #d94338
+darker cf red          #a42820
+dark background gray   #1a1a1a
+
+------------ Fonts --------------------
 
 */
 
@@ -15,13 +20,14 @@ medium codefellows red #CF3328
 body {
 	font-family: Arial, Verdana, sans-serif;
 	color: #ffffff;
-	background-color: #000000;
+	background-color: #1a1a1a;
 }
 
 h1 {
 	font-family: 'Cuprum', sans-serif;
 	color: #CF3328;
   text-align: center;
+  padding-top: 1em;
 }
 
 h2 { }
@@ -39,8 +45,8 @@ div { }
 
 /* ##### Navigation Styles ##### */
 .nav-wrapper{
-  background: #CF3328;
-  padding-top: 8px;
+  background: #d94338;
+  padding-top: 7px;
 }
 
 .nav-columns{
@@ -48,7 +54,8 @@ div { }
   text-align: center;
   text-decoration: none;
   list-style: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #a42820;
+  margin-bottom: 5px;
 }
 
 .navbar a:link{
@@ -60,16 +67,44 @@ div { }
   text-decoration: none;
 }
 .navbar a:hover {
-	color: LightGray;
-	text-decoration: underline;
+	color: #262626;
+	text-decoration: none;
 }
 .navbar a:active {
-	color: maroon;
+	color: #262626;
   text-decoration: underline;
 }
 
-/* button styles */
+/* ----------- Column Styles -------------*/
+.about-info{
+  margin-top: 10px;
+}
 
+/* -----------------button styles ----------*/
+
+/* ----------- Martini Lunch Styles --------*/
+.martini-content{
+  margin: 2em auto 2em auto;
+  text-align: center;
+}
+
+.martini-content a{
+  text-decoration: none;
+  color:  #d94338;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+}
+
+.martini-content a:visited{
+   color: #d94338;
+}
+
+.martini-content a:hover{
+  color: #a42820;
+  text-decoration: underline;
+}
+
+/* -------------- Table Styles -------------*/
 #sub {
  -webkit-border-radius: 28;
  -moz-border-radius: 28;
@@ -105,17 +140,6 @@ input: focus, input: hover {
     border: 1px solid #f00909;
 }
 
-/*#userinputform{
-    width: 100%;
-    margin: 20px;
-    border: 2px solid #f00909;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    font-size: 16px;
-    display: block;
-}*/
-
 .style-select select {
   background: #fff;
   border: 1px solid #f00909;
@@ -133,10 +157,11 @@ input: focus, input: hover {
 /* ###### Media Queries ###### */
 @media screen and (min-width:550px){
   .nav-wrapper{
-  background: #CF3328;
+  background: #d94338;
   display: block;
   width: 100%;
   float: none;
+  padding-top: none;
   }
 
   .nav-columns{
@@ -145,15 +170,20 @@ input: focus, input: hover {
     display: inline-block;
     text-align: center;
     padding-top: 3px;
+    border-bottom: none;
+    border-left: 1px solid  #a42820;
   }
 
   .nav-wrapper ul li{
    display: inline-block;
-   margin: 0 auto 0 auto;
+  /* margin: 0 auto 0 auto;*/
    padding: 10px 0 10px 0;
    list-style: none;
    float: none;
-   border: none;
   }
 
+  .highlight-row{
+    background-color: none;
+  }
 }
+

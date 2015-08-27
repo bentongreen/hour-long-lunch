@@ -1,21 +1,20 @@
-'use strict'
+'use strict';
 $(document).ready(function(){
 
-	if(localStorage.getItem("login") != "true"){
-		window.location.href = "login.html";
+	if(localStorage.getItem('login') != 'true'){
+		window.location.href = 'login.html';
 	}
   //Event listeners for form input
   var spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
   var storageArray = new Array();
 
-  if(localStorage["storageArray"] == undefined){
-   localStorage["storageArray"] = JSON.stringify(storageArray);
+  if(localStorage['storageArray'] == undefined){
+   localStorage['storageArray'] = JSON.stringify(storageArray);
  }
 
-  if(localStorage.getItem("login") === "true"){
-  var storedArray = JSON.parse(localStorage["storageArray"]);
-  for(var i = 0; i < storedArray.length; i++)
-  {
+  if(localStorage.getItem('login') === 'true'){
+  var storedArray = JSON.parse(localStorage['storageArray']);
+  for(var i = 0; i < storedArray.length; i++) {
     $('#unorderedList').append(storedArray[i]);
   }
  } 
@@ -33,13 +32,25 @@ $('#sub').click(function() {
 
     //-----------------------------linkValue to be generated from function that get a google maps location from street names ------------------------------------------------------
       var geocoder;
+<<<<<<< HEAD
       var firstLoc;
       var streetAddress = spotStreetValue + ", Seattle, WA, 98109, USA";
+=======
+      var streetAddress = spotStreetValue + ', Seattle, WA, 98109, USA';
+>>>>>>> 6867f5ef7e6690ec6900934f31de5bb45fb47bfc
       geocoder = new google.maps.Geocoder();
-      geocoder.geocode( {'address': streetAddress},
+      geocoder.geocode( { 'address': streetAddress },
           function(results, status) {
               firstLoc = results[0].geometry.location;
+<<<<<<< HEAD
               console.log(firstLoc);
+=======
+              console.log('Firstloc: ' + firstLoc);
+              firstLoc = JSON.stringify(firstLoc);
+              firstLoc = firstLoc.replace('(', '');
+              firstLoc = firstLoc.replace(')', ''); 
+            } 
+>>>>>>> 6867f5ef7e6690ec6900934f31de5bb45fb47bfc
           }
         );
 
@@ -59,15 +70,14 @@ $('#sub').click(function() {
   inputForm.waitTime();
   inputForm.getRating();
 
-   //appends user submissons to unordered list of added locations
-   var liString = "<li>" + spotNameValue + " - " + spotStreetValue + " - " + spotCrossValue + " - " + cuisineValue + " - " + waitTimeValue + " - " + ratingValue + " - " + linkValue + "</li>";
+     //appends user submissons to unordered list of added locations
+   var liString = '<li>' + spotNameValue + ' - ' + spotStreetValue + ' - ' + spotCrossValue + ' - ' + cuisineValue + ' - ' + waitTimeValue + ' - ' + ratingValue + ' - ' + linkValue + '</li>';
    JSON.stringify(liString);
    storageArray.push(liString);
-   localStorage["storageArray"] = JSON.stringify(storageArray);
-   var storedArray = JSON.parse(localStorage["storageArray"]);
+   localStorage['storageArray'] = JSON.stringify(storageArray);
+   var storedArray = JSON.parse(localStorage['storageArray']);
 
-  for(var i = 0; i < storageArray.length; i++)
-  {
+  for(var i = 0; i < storageArray.length; i++) {
     $('#unorderedList').append(storedArray[i]);
   }
 
@@ -96,9 +106,14 @@ InputForm.prototype.waitTime = function() {
   for(var i = 0; i < this.waitArray.length; i++) {
     waitSum += this.waitArray[i];
 };
+<<<<<<< HEAD
   var waitAvg = waitSum/this.waitArray.length;
  // console.log("The sum of all the elements is: " + waitSum + " The average is: " + waitAvg);
 
+=======
+  var waitAvg = waitSum / this.waitArray.length;
+  console.log('The sum of all the elements is: ' + waitSum + ' The average is: ' + waitAvg);
+>>>>>>> 6867f5ef7e6690ec6900934f31de5bb45fb47bfc
 };
 
 // Function for averaging user input of score 1-5
@@ -109,8 +124,14 @@ InputForm.prototype.getRating = function() {
     ratingSum += this.ratingArray[i];
   }
 
+<<<<<<< HEAD
   var avgRating = ratingSum/this.ratingArray.length;
  // console.log("The sum of all the elements is: " + ratingSum + " The average is: " + avgRating);
   };
 
+=======
+  var avgRating = ratingSum / this.ratingArray.length;
+  console.log('The sum of all the elements is: ' + ratingSum + ' The average is: ' + avgRating);
+  };  
+>>>>>>> 6867f5ef7e6690ec6900934f31de5bb45fb47bfc
 });
