@@ -140,6 +140,18 @@ input: focus, input: hover {
     border: 1px solid #f00909;
 }
 
+.day-select select {
+  background: #fff;
+  border: 1px solid #f00909;
+  width: 150px;
+  padding: 5px;
+  font-size: 14px;
+  color: #000;
+  line-height: 1;
+  border-radius: 5px;
+  height: 34px;
+}
+
 .style-select select {
   background: #fff;
   border: 1px solid #f00909;

@@ -5,7 +5,7 @@ $(document).ready(function(){
 		window.location.href = 'login.html';
 	}
   //Event listeners for form input
-  var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
+  var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, dayValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
   var storageArray = new Array();
 
   if(localStorage['storageArray'] == undefined){
@@ -17,13 +17,14 @@ $(document).ready(function(){
   for(var i = 0; i < storedArray.length; i++) {
     $('#unorderedList').append(storedArray[i]);
   }
- } 
+ }
 
 // Take data from form
 $('#sub').click(function() {
   spotNameValue = $('#spotname').val();
   spotStreetValue = $('#spotstreet').val();
   spotCrossValue = $('#spotcross').val();
+  dayValue = $('#day').val();
   cuisineValue = $('#cuisine').val();
   ratingValue = $('#rating').val();
   waitTimeValue = $('#wait-time').val();
@@ -41,8 +42,8 @@ $('#sub').click(function() {
               console.log('Firstloc: ' + firstLoc);
               firstLoc = JSON.stringify(firstLoc);
               firstLoc = firstLoc.replace('(', '');
-              firstLoc = firstLoc.replace(')', ''); 
-            } 
+              firstLoc = firstLoc.replace(')', '');
+            }
           }
         );
 
@@ -55,7 +56,7 @@ $('#sub').click(function() {
   inputForm.getRating();
 
      //appends user submissons to unordered list of added locations
-   var liString = '<li>' + spotNameValue + ' - ' + spotStreetValue + ' - ' + spotCrossValue + ' - ' + cuisineValue + ' - ' + waitTimeValue + ' - ' + ratingValue + ' - ' + linkValue + '</li>';
+   var liString = '<li>' + spotNameValue + ' - ' + spotStreetValue + ' - ' + spotCrossValue + ' - ' + dayValue + ' - ' + cuisineValue + ' - ' + waitTimeValue + ' - ' + ratingValue + ' - ' + linkValue + '</li>';
    JSON.stringify(liString);
    storageArray.push(liString);
    localStorage['storageArray'] = JSON.stringify(storageArray);
@@ -104,5 +105,5 @@ InputForm.prototype.getRating = function() {
 
   var avgRating = ratingSum / this.ratingArray.length;
   console.log('The sum of all the elements is: ' + ratingSum + ' The average is: ' + avgRating);
-  };  
+  };
 });
