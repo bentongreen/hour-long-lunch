@@ -21,21 +21,12 @@
 
   <div class="section">
     <div class="row">
-      <div>
-        <img src="img">
-      </div>
-
-      <div>
 	     <h1>Hour Long Lunch</h1>
-      </div>
-
-      <div>
-
-      </div>
     </div><!--end row-->
   </div><!-- end section-->
 
 
+  <div class="wrapper">
   <div class="section">
     <div class="row">
         <div class="nav-wrapper">
@@ -62,20 +53,27 @@
 
   <div class="section">
     <div class="container">
-      <div class="row">
-        <div class="six columns">
 
         <form id="userinputform">
+          <div class="row">
           <h3>Want to add a new lunch spot?</h3>
+          </div><!-- end row -->
+
+      <div class="row">
+        <div class="six columns">
           <p>What's this Lunch Spot called?
-            <input type="text" id="spotname" />
-          </p>
+            <input type="text" id="spotname" placeholder="Gandalf's Wizard Snacks"/> </p>
+        </div><!-- 6 col -->
 
-          <p>What street is this Lunch Spot on?<br/>
+        <div class="six columns">
+          <p>What street is this Lunch Spot on?
             (House Number, Street Direction, Street Name, Street Suffix)
-            <input type="text" id="spotstreet" />
-          </p>
+            <input type="text" id="spotstreet" placeholder="511 Boren Ave. N"/> </p>
+        </div><!-- 6 col -->
+      </div><!-- end row -->
 
+      <div class="row">
+        <div class="six columns">
           <p class="day-select">What day is it?<br/>
             <select name id="day">
               <option value="Monday">Monday</option>
@@ -85,7 +83,9 @@
               <option value="Friday">Friday</option>
             </select>
           </p>
+        </div><!-- 6 col -->
 
+        <div class="six columns">
           <p class= "style-select">What type of food does this spot have?<br/>
             <select name id="cuisine">
               <option value="sandwich">Sandwich</option>
@@ -94,31 +94,52 @@
               <option value="mediterranean">Mediterranean</option>
             </select>
           </p>
-
-          <p>What's the wait time (in minutes) at this spot?
-            <input type="text" id="wait-time" />
-          </p>
-
-          <p>What rating (1-5) would you give this spot?
-            <input type="text" id="rating" />
-          </p>
-
-            <input id="sub" type="button" value="Submit"/>
-          </p>
-        </form>
-        </div><!--end six columns-->
+        </div><!-- 6 col -->
       </div><!-- end row -->
+
+      <div class="row">
+        <div class="six columns">
+          <p>What's the wait time (in minutes) at this spot?
+            <input type="text" id="wait-time" placeholder="4"/>
+          </p>
+        </div><!-- 6 col -->
+
+        <div class="six columns">
+          <p>What rating (1-5) would you give this spot?
+            <input type="text" id="rating" placeholder="5"/>
+          </p>
+        </div><!-- 6 col -->
+      </div><!-- end row -->
+
+      <div class="row">
+        <div class="twelve columns">
+            <input id="sub" type="button" value="Submit"/>
+        </div> <!-- end 12 col -->
+      </div><!-- end row -->
+
+        </form>
     </div><!-- end container -->
   </div><!-- end section -->
 
-  <div id="addedLocationsDiv">
-  <h3>Looking for something new? Try one of these locations submitted by our users!</h3>
-  <ul id="unorderedList">
-    <li id="unorderedListTitle">Spotname - Street - Cross Street - Day - Type of Food - Wait Time - Rating</li>
-    <li>ReformedPicnicNewts Subs - Boren Ave - Republican St - Sandwich - 5 - 10 - <a href="https://www.google.com/maps?q=47.623595,-122.3358582">See on map!</a></li>
-  </ul>
-  </div>
-  <footer>
+  <div class="section">
+    <div class="container">
+      <div id="addedLocationsDiv">
+        <h3>Looking for something new? Try one of these locations submitted by our users!</h3>
+
+        <ul id="unorderedList">
+        <!-- <li id="unorderedListTitle">Spotname - Street - Cross Street - Day - Type of Food - Wait Time - Rating</li> -->
+        <li>ReformedPicnicNewts Subs - Boren Ave - Republican St - Sandwich - 5 - 10 - <a href="https://www.google.com/maps?q=47.623595,-122.3358582">See on map!</a></li>
+      </ul>
+      </div><!-- end addedlocationdiv -->
+    </div><!-- end container -->
+  </div><!-- end section -->
+  </div><!-- end wrapper -->
+
+  <footer class="sticky-footer clearfix">
+    <ul>
+      <li>Created by Bella, Benton, Kelsey &amp; Ryan</li>
+      <li>&copy; 2015</li>
+    </ul>
   </footer>
 
 <script src="js/app.js"></script>
