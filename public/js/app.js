@@ -41,18 +41,18 @@ $('#sub').click(function() {
               firstLoc = results[0].geometry.location;
               firstLoc = JSON.stringify(firstLoc);
               firstLoc = firstLoc.replace('(', '')
-              firstLoc = firstLoc.replace(')', ''); 
-              firstLoc = firstLoc.replace('{', ''); 
-              firstLoc = firstLoc.replace('}', ''); 
-              firstLoc = firstLoc.replace('G', ''); 
-              firstLoc = firstLoc.replace('K', ''); 
-              firstLoc = firstLoc.replace('"', ''); 
-              firstLoc = firstLoc.replace('"', ''); 
-              firstLoc = firstLoc.replace('"', ''); 
-              firstLoc = firstLoc.replace('"', ''); 
-              firstLoc = firstLoc.replace(':', ''); 
-              firstLoc = firstLoc.replace(':', ''); 
-        
+              firstLoc = firstLoc.replace(')', '');
+              firstLoc = firstLoc.replace('{', '');
+              firstLoc = firstLoc.replace('}', '');
+              firstLoc = firstLoc.replace('G', '');
+              firstLoc = firstLoc.replace('K', '');
+              firstLoc = firstLoc.replace('"', '');
+              firstLoc = firstLoc.replace('"', '');
+              firstLoc = firstLoc.replace('"', '');
+              firstLoc = firstLoc.replace('"', '');
+              firstLoc = firstLoc.replace(':', '');
+              firstLoc = firstLoc.replace(':', '');
+
 //-----------------------------------------------------------------------------------------------------------------------------------------------
 console.log(firstLoc);
 linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
@@ -107,6 +107,9 @@ InputForm.prototype.getRating = function() {
   var ratingSum = 0;
   for(var i = 0; i < this.waitArray.length; i++) {
     ratingSum += this.ratingArray[i];
+  }
+   if (ratingValue > 5) {
+    alert('Choose a number between 1 and 5!');
   }
 
   var avgRating = ratingSum / this.ratingArray.length;
