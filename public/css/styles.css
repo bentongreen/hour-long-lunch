@@ -388,8 +388,8 @@ footer{
   font-family: Courier;
   padding: 5px 10px;
   border-radius: 5px;
-  bottom: 30px;
-  left: 50%;
+  bottom: 0px;
+  left: 55%;
   position: absolute;
   text-shadow: 0.1em 0.1em 0.05em #333;
 
