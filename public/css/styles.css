@@ -96,6 +96,24 @@ div { }
   text-decoration: underline;
 }
 
+/*------------ Logo Styles ------------*/
+
+.logo-left {
+  display: inline-block;
+  float: left;
+ /* padding-right: 1rem;*/      
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.logo-right {
+  display: inline-block;;
+  float: right;
+  /*padding-right: 1rem; */     
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+
 /* ----------- Column Styles -------------*/
 .about-info{
   margin-top: 10px;
