@@ -5,7 +5,7 @@ $(document).ready(function(){
 		window.location.href = "login.html";
 	}
   //Event listeners for form input
-  var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
+  var spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
   var storageArray = new Array();
 
   if(localStorage["storageArray"] == undefined){
@@ -33,22 +33,26 @@ $('#sub').click(function() {
 
     //-----------------------------linkValue to be generated from function that get a google maps location from street names ------------------------------------------------------
       var geocoder;
+      var firstLoc;
       var streetAddress = spotStreetValue + ", Seattle, WA, 98109, USA";
       geocoder = new google.maps.Geocoder();
       geocoder.geocode( {'address': streetAddress},
           function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
               firstLoc = results[0].geometry.location;
-              console.log("Firstloc: " + firstLoc);
-              firstLoc = JSON.stringify(firstLoc);
-              firstLoc = firstLoc.replace("(", "");
-              firstLoc = firstLoc.replace(")", ""); 
-            } 
+              console.log(firstLoc);
           }
         );
 
-  //-----------------------------------------------------------------------------------------------------------------------------------------------
 
+
+  //-----------------------------------------------------------------------------------------------------------------------------------------------
+  //while(firstLoc == undefined){
+  //              console.log("in while loop");
+  //            }
+  //firstLoc = JSON.stringify(firstLoc);
+  //firstLoc = firstLoc.replace("(", "");
+ // firstLoc = firstLoc.replace(")", ""); 
+  console.log("Firstloc2: " + firstLoc);
   linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
 
 
@@ -93,7 +97,7 @@ InputForm.prototype.waitTime = function() {
     waitSum += this.waitArray[i];
 };
   var waitAvg = waitSum/this.waitArray.length;
-  console.log("The sum of all the elements is: " + waitSum + " The average is: " + waitAvg);
+ // console.log("The sum of all the elements is: " + waitSum + " The average is: " + waitAvg);
 
 };
 
@@ -106,7 +110,7 @@ InputForm.prototype.getRating = function() {
   }
 
   var avgRating = ratingSum/this.ratingArray.length;
-  console.log("The sum of all the elements is: " + ratingSum + " The average is: " + avgRating);
+ // console.log("The sum of all the elements is: " + ratingSum + " The average is: " + avgRating);
   };
 
 });
