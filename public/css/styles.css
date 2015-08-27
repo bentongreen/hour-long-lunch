@@ -58,7 +58,28 @@ div { }
   margin-bottom: 5px;
 }
 
-.navbar a:link{
+.secret-link a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.secret-link a:hover {
+  color: white;
+  background-color: #CF3328;
+  text-decoration: none;
+}
+
+.secret-link a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.secret-link a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:link {
 	color: white;
 	text-decoration: none;
 }
