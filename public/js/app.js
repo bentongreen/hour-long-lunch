@@ -5,11 +5,11 @@ $(document).ready(function(){
 		window.location.href = 'login.html';
 	}
   //Event listeners for form input
-<<<<<<< HEAD
+
   var spotNameValue, spotStreetValue, spotCrossValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
-=======
+
   var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, dayValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
->>>>>>> 73a3cdf046c16159e462d7619b06ee23266296d3
+
   var storageArray = new Array();
 
   if(localStorage['storageArray'] == undefined){
@@ -37,31 +37,29 @@ $('#sub').click(function() {
 
     //-----------------------------linkValue to be generated from function that get a google maps location from street names ------------------------------------------------------
       var geocoder;
-<<<<<<< HEAD
+
       var firstLoc;
       var streetAddress = spotStreetValue + ", Seattle, WA, 98109, USA";
-=======
+
       var streetAddress = spotStreetValue + ', Seattle, WA, 98109, USA';
->>>>>>> 6867f5ef7e6690ec6900934f31de5bb45fb47bfc
+
       geocoder = new google.maps.Geocoder();
       geocoder.geocode( { 'address': streetAddress },
           function(results, status) {
               firstLoc = results[0].geometry.location;
-<<<<<<< HEAD
+
               console.log(firstLoc);
-=======
+
               console.log('Firstloc: ' + firstLoc);
               firstLoc = JSON.stringify(firstLoc);
               firstLoc = firstLoc.replace('(', '');
-<<<<<<< HEAD
+
               firstLoc = firstLoc.replace(')', ''); 
             } 
->>>>>>> 6867f5ef7e6690ec6900934f31de5bb45fb47bfc
-=======
+
               firstLoc = firstLoc.replace(')', '');
             }
->>>>>>> 73a3cdf046c16159e462d7619b06ee23266296d3
-          }
+ }
         );
 
 
@@ -116,14 +114,13 @@ InputForm.prototype.waitTime = function() {
   for(var i = 0; i < this.waitArray.length; i++) {
     waitSum += this.waitArray[i];
 };
-<<<<<<< HEAD
+
   var waitAvg = waitSum/this.waitArray.length;
  // console.log("The sum of all the elements is: " + waitSum + " The average is: " + waitAvg);
 
-=======
+
   var waitAvg = waitSum / this.waitArray.length;
   console.log('The sum of all the elements is: ' + waitSum + ' The average is: ' + waitAvg);
->>>>>>> 6867f5ef7e6690ec6900934f31de5bb45fb47bfc
 };
 
 // Function for averaging user input of score 1-5
@@ -134,19 +131,18 @@ InputForm.prototype.getRating = function() {
     ratingSum += this.ratingArray[i];
   }
 
-<<<<<<< HEAD
+
   var avgRating = ratingSum/this.ratingArray.length;
  // console.log("The sum of all the elements is: " + ratingSum + " The average is: " + avgRating);
   };
 
-=======
+
   var avgRating = ratingSum / this.ratingArray.length;
   console.log('The sum of all the elements is: ' + ratingSum + ' The average is: ' + avgRating);
-<<<<<<< HEAD
+
   };  
->>>>>>> 6867f5ef7e6690ec6900934f31de5bb45fb47bfc
 });
-=======
+
   };
 });
->>>>>>> 73a3cdf046c16159e462d7619b06ee23266296d3
+
