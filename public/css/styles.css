@@ -13,9 +13,7 @@ darker cf red          #a42820
 dark background gray   #1a1a1a
 
 ------------ Fonts --------------------
-
 */
-
 
 body {
 	font-family: Arial, Verdana, sans-serif;
@@ -34,7 +32,6 @@ h2 { }
 h3 {
   font-size: 1.3em;
   font-weight: bold;
-  text-align: center;
  }
 
 h5 { }
@@ -165,13 +162,15 @@ div { }
 #sub {
  -webkit-border-radius: 28;
  -moz-border-radius: 28;
- border-radius: 28px;
- font-family: Arial;
+ border-radius: 25px;
+ font-family: Arial, sans-serif;
  color: #ffffff ;
- font-size: 1em;
+ /*font-size: 1em;*/
  background: #000000 ;
  border: solid #f00909  2px;
  text-decoration: none;
+ text-align: center;
+ padding: .6em 1em;
 }
 
 #sub:hover {
@@ -180,19 +179,18 @@ div { }
 }
 
 input {
-    font size: 120%;
     color: #000000;
     background-color: #fff;
     border: 1px solid #f00909;
     border-radius: 5px;
-    padding: 5px 5px 5px 5px;
-    background-repeat: no-repeat;;
+    padding: 7px;
+    background-repeat: no-repeat;
     background-position: 8px 9px;
     display: block;
     margin-bottom: 10px;
 }
 
-input: focus, input: hover {
+input:focus, input:hover {
     background-color: #fff ;
     border: 1px solid #f00909;
 }
@@ -221,7 +219,47 @@ input: focus, input: hover {
   height: 34px;
 /*  -webkit-appearance: none;*/
  }
+ /* ---------  User Input Styles ------*/
+ #unorderedList li{
+  list-style: none;
+  font-size: 1.2em;
+  padding-top: 1.3em;
+ }
 
+#addedLocationsDiv h3{
+  text-align: center;
+  font-size: 1.5em;
+  color: #d94338;
+}
+#userinputform h3{
+  text-align: center;
+  font-size: 1.5em;
+  padding: 2em 0 1em 0;
+
+}
+#addedLocationsDiv li a{
+  text-decoration: none;
+  color: #d94338;
+}
+
+#addedLocationsDiv li a:visited{
+  text-decoration: none;
+  color: #d94338;
+}
+
+#addedLocationsDiv li a:hover{
+  text-decoration: underline;
+  color: #a42820;
+}
+
+/* -------- Footer ------------*/
+
+footer{
+  background: #d94338;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
 
 /* ###### Media Queries ###### */
 @media screen and (min-width:550px){
