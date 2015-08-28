@@ -34,13 +34,13 @@ $('#sub').click(function() {
 //-----------------------------linkValue to be generated from function that get a google maps location from street names ------------------------------------------------------
       var geocoder;
       var firstLoc;
-      var streetAddress = spotStreetValue + ", Seattle, WA, 98109, USA";
+      var streetAddress = spotStreetValue + ', Seattle, WA, 98109, USA';
       geocoder = new google.maps.Geocoder();
       geocoder.geocode( { 'address': streetAddress },
           function(results, status) {
               firstLoc = results[0].geometry.location;
               firstLoc = JSON.stringify(firstLoc);
-              firstLoc = firstLoc.replace('(', '')
+              firstLoc = firstLoc.replace('(', '');
               firstLoc = firstLoc.replace(')', '');
               firstLoc = firstLoc.replace('{', '');
               firstLoc = firstLoc.replace('}', '');
