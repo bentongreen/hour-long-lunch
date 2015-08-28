@@ -28,17 +28,11 @@ h1 {
   padding-top: 1em;
 }
 
-h2 { }
 h3 {
   font-size: 1.3em;
   font-weight: bold;
  }
 
-h5 { }
-h6 { }
-
-p { }
-div { }
 
 /* ##### Navigation Styles ##### */
 .nav-wrapper{
@@ -53,6 +47,40 @@ div { }
   list-style: none;
   border-bottom: 2px solid #a42820;
   margin-bottom: 5px;
+}
+
+.navbar a:link {
+	color: white;
+	text-decoration: none;
+}
+.navbar a:visited {
+	color: white;
+  text-decoration: none;
+}
+.navbar a:hover {
+	color: #262626;
+	text-decoration: none;
+}
+.navbar a:active {
+	color: #262626;
+  text-decoration: underline;
+}
+
+.about-info a:link {
+  color: #d94338;
+  text-decoration: none;
+}
+.about-info a:visited {
+  color: #d94338;
+  text-decoration: none;
+}
+.about-info a:hover {
+  color: #a42820;
+  text-decoration: underline;
+}
+.about-info a:active {
+  color: #a42820;
+  text-decoration: underline;
 }
 
 .secret-link a:link {
@@ -75,30 +103,12 @@ div { }
   color: white;
   text-decoration: none;
 }
-
-.navbar a:link {
-	color: white;
-	text-decoration: none;
-}
-.navbar a:visited {
-	color: white;
-  text-decoration: none;
-}
-.navbar a:hover {
-	color: #262626;
-	text-decoration: none;
-}
-.navbar a:active {
-	color: #262626;
-  text-decoration: underline;
-}
-
 /*------------ Logo Styles ------------*/
 
 .logo-left {
   display: inline-block;
   float: left;
- /* padding-right: 1rem;*/      
+ /* padding-right: 1rem;*/
   margin-top: 2rem;
   margin-left: 1rem;
 }
@@ -106,7 +116,7 @@ div { }
 .logo-right {
   display: inline-block;;
   float: right;
-  /*padding-right: 1rem; */     
+  /*padding-right: 1rem; */
   margin-top: 2rem;
   margin-right: 1rem;
 }
@@ -254,12 +264,21 @@ input:focus, input:hover {
 
 /* -------- Footer ------------*/
 
-footer{
-  background: #d94338;
+.sticky-footer{
+  background: #404040;
   width: 100%;
   left: 0;
   bottom: 0;
+  height: 50%;
 }
+
+.sticky-footer ul li{
+  list-style: none;
+  text-align: center;
+  color: #d94338;
+  padding-top: 1em;
+}
+
 
 /* ###### Media Queries ###### */
 @media screen and (min-width:550px){
@@ -297,11 +316,26 @@ footer{
   text-align: left;
 }
 
+  .logo-left{
+    padding: 0 0 2em 3em;
+    margin-top: -5em;
+  }
+
+  .logo-right{
+    padding: 0 2em 0 3em;
+    margin-top: -5em;
+  }
+
+  .page-title{
+    padding-top: 1em;
+  }
+
 }
 
+/* -------------   Page Flip Animations ------- */
 /*  Created by David Walsh
   http://davidwalsh.name/css-flip*/
-  
+
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -309,7 +343,7 @@ footer{
   perspective: 1000;
 }
 
-  .flip-container:hover .flipper,  
+  .flip-container:hover .flipper,
   .flip-container.hover .flipper {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
@@ -328,7 +362,7 @@ footer{
 
   -moz-transition: 0.6s;
   -moz-transform-style: preserve-3d;
-  
+
   -o-transition: 0.6s;
   -o-transform-style: preserve-3d;
 

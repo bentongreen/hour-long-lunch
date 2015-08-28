@@ -3,13 +3,12 @@ body {
   background-color: #D3CEAA;
   border-right:25px solid #8E001C;
   border-left:25px solid #8E001C;
+
 }
 
 #bodyDiv{
   max-height: 1024px;
   height: 1200px;
-  border-right:100px solid #8E001C;
-  border-left:100px solid #8E001C;
 }
 
 #loginH1{
