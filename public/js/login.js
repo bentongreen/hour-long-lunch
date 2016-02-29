@@ -1,9 +1,7 @@
 'use strict';
 $(document).ready(function() {
 
-  localStorage.setItem('mrdarcy', 'janeausten');
-  localStorage.setItem('student', 'guest');
-  localStorage.setItem('faculty', 'codefellows');
+  localStorage.setItem('guest', 'guest');
   localStorage.setItem('benton', 'green');
   localStorage.setItem('bella', 'idontcare');
   localStorage.setItem('kelsey', 'kelseycat');
