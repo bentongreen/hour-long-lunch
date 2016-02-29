@@ -1,9 +1,9 @@
 'use strict';
 $(document).ready(function(){
 
-  if(localStorage.getItem('login') != 'true') {
-    window.location.href = 'login.html';
-  }
+  // if(localStorage.getItem('login') != 'true') {
+  //   window.location.href = 'login.html';
+  // }
   //Event listeners for form input
   var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, dayValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
   var storageArray = new Array();
