@@ -8,4 +8,3 @@ $(document).ready(function() {
 		.animate({ 'left': '1px' }, 500);
   });
 });
-

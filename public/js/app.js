@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   if(localStorage['storageArray'] === undefined) {
    localStorage['storageArray'] = JSON.stringify(storageArray);
- }
+  }
 
   if(localStorage.getItem('login') === 'true') {
   var storedArray = JSON.parse(localStorage['storageArray']);
@@ -54,39 +54,23 @@ $(document).ready(function(){
         firstLoc = firstLoc.replace(':', '');
         firstLoc = firstLoc.replace(':', '');
 
-  //-----------------------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------------------
         linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
+
         inputForm.waitTime();
         inputForm.getRating();
 
-        //appends user submissons to unordered list of added locations
-        var liString = '<li>' + spotNameValue + ' - ' + spotStreetValue + ' - ' + spotCrossValue + ' - ' + dayValue + ' - ' + cuisineValue + ' - ' + waitTimeValue + ' - ' + ratingValue + ' - ' + linkValue + '</li>';
-        JSON.stringify(liString);
-        storageArray.push(liString);
-        localStorage['storageArray'] = JSON.stringify(storageArray);
-        var storedArray = JSON.parse(localStorage['storageArray']);
+      //appends user submissons to unordered list of added locations
+       var liString = '<li>' + spotNameValue + ' - ' + spotStreetValue + ' - ' + spotCrossValue + ' - ' + dayValue + ' - ' + cuisineValue + ' - ' + waitTimeValue + ' - ' + ratingValue + ' - ' + linkValue + '</li>';
+       JSON.stringify(liString);
+       storageArray.push(liString);
+       localStorage['storageArray'] = JSON.stringify(storageArray);
+       var storedArray = JSON.parse(localStorage['storageArray']);
 
         for(var i = 0; i < storageArray.length; i++) {
           $('#unorderedList').append(storedArray[i]);
         }
-      });
-
-//-----------------------------------------------------------------------------------------------------------------------------------------------
-linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
-
-  inputForm.waitTime();
-  inputForm.getRating();
-
-  //appends user submissons to unordered list of added locations
-   var liString = '<li>' + spotNameValue + ' - ' + spotStreetValue + ' - ' + spotCrossValue + ' - ' + dayValue + ' - ' + cuisineValue + ' - ' + waitTimeValue + ' - ' + ratingValue + ' - ' + linkValue + '</li>';
-   JSON.stringify(liString);
-   storageArray.push(liString);
-   localStorage['storageArray'] = JSON.stringify(storageArray);
-   var storedArray = JSON.parse(localStorage['storageArray']);
-
-    for(var i = 0; i < storageArray.length; i++) {
-      $('#unorderedList').append(storedArray[i]);
-    }
+    });
   });
 
   // Constructor
