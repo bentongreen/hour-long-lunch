@@ -1,37 +1,36 @@
 'use strict';
-$(document).ready(function(){
 
-localStorage.setItem('mrdarcy', 'janeausten');
-localStorage.setItem('student', 'guest');
-localStorage.setItem('faculty', 'codefellows');
-localStorage.setItem('benton', 'green');
-localStorage.setItem('bella', 'idontcare');
-localStorage.setItem('kelsey', 'kelseycat');
-localStorage.setItem('ryan', 'surpriseme');
+$(document).ready(function() {
 
-	$('#loginButton').click(function(){
-		var username = $('#usernameId').val();
-		var password = $('#passwordId').val();
+  localStorage.setItem('guest', 'guest');
+  localStorage.setItem('benton', 'green');
+  localStorage.setItem('bella', 'idontcare');
+  localStorage.setItem('kelsey', 'kelseycat');
+  localStorage.setItem('ryan', 'surpriseme');
 
-		if(password === localStorage.getItem(username)){
-			localStorage.setItem('login', 'true');
-			window.location.href = 'index.html';
-		} else {
-				alert('Invalid Password');
-			}
-	});
+    $('#loginButton').click(function() {
+      var username = $('#usernameId').val();
+      var password = $('#passwordId').val();
 
-	$('#submitButton').click(function(){
-		var username2 = $('#newUsername').val();
-		var password2 = $('#newPassword').val();
+      if(password === localStorage.getItem(username)) {
+        localStorage.setItem('login', 'true');
+        window.location.href = 'index.html';
+      } else {
+        alert('Invalid Password');
+      }
+    });
 
-		localStorage.setItem(username2, password2);
+    $('#submitButton').click(function() {
+      var username2 = $('#newUsername').val();
+      var password2 = $('#newPassword').val();
 
-		if(password2 === localStorage.getItem(username2)){
-			localStorage.setItem('login', 'true');
-			window.location.href = 'index.html';
-		}
+      localStorage.setItem(username2, password2);
 
-	});
+      if(password2 === localStorage.getItem(username2)) {
+        localStorage.setItem('login', 'true');
+        window.location.href = 'index.html';
+      }
+
+  });
 
 });
