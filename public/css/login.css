@@ -1,18 +1,24 @@
 body {
-  font: 1.5em sans-serif #424242;
-  background-color: #D3CEAA;
+  font: 1.5em sans-serif white;
+  background-color: #454545;
   border-right:25px solid #8E001C;
   border-left:25px solid #8E001C;
 
 }
 
-#bodyDiv{
-  max-height: 1024px;
-  height: 1200px;
+.bodyDiv{
+  padding-top: 1em;
+  margin-top: 4em;
+  padding-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #141517;
+  border-radius: 0.8em;
+  max-width: 400px;
 }
 
-#loginH1{
-	font-color: #424242;
+.loginH1{
+	color: #FFFFFF;
 	font-size: 3em;
 	text-align: center;
 	padding-top: 3%;
@@ -21,18 +27,18 @@ body {
 	font-weight: bold;
 }
 
-#login {
+.login {
 	margin: 50px auto;
 	width: 242px;
 }
 
-#login input {
+.login input {
 	border: none;
 	height: 48px;
 	outline: none;
 }
 
-#login input[type="text"] {
+.login input[type="text"] {
 	border-top: 1px solid;
 	border-right: 1px solid;
 	border-left: 1px solid;
@@ -41,7 +47,7 @@ body {
 	width: 204px;
 }
 
-#login input[type="password"] {
+.login input[type="password"] {
 	border-top: 1px solid;
 	border-right: 1px solid;
 	border-bottom: 1px solid;
@@ -52,7 +58,7 @@ body {
 	width: 204px;
 }
 
-#login input[type="button"] {
+.login input[type="button"] {
 	border: 1px solid;
 	border-radius: 5px;
 	font-weight: bold;
@@ -62,12 +68,12 @@ body {
 	width: 240px;
 }
 
-#login input[type="button"]:hover{
+.login input[type="button"]:hover{
 background-color: #8E001C;
 }
 
-#signupH3{
-	font-color: #424242;
+.signupH3{
+	color: #FFFFFF;
 	font-size: 2em;
 	text-align: center;
 	padding-top: 3%;
@@ -76,18 +82,18 @@ background-color: #8E001C;
 	font-weight: bold;
 }
 
-#signup {
+.signup {
 	margin: 50px auto;
 	width: 242px;
 }
 
-#signup  input {
+.signup  input {
 	border: none;
 	height: 48px;
 	outline: none;
 }
 
-#signup  input[type="text"] {
+.signup  input[type="text"] {
 	border-top: 1px solid;
 	border-right: 1px solid;
 	border-left: 1px solid;
@@ -96,7 +102,7 @@ background-color: #8E001C;
 	width: 204px;
 }
 
-#signup  input[type="password"] {
+.signup  input[type="password"] {
 	border-top: 1px solid;
 	border-right: 1px solid;
 	border-bottom: 1px solid;
@@ -107,7 +113,7 @@ background-color: #8E001C;
 	width: 204px;
 }
 
-#signup  input[type="button"] {
+.signup  input[type="button"] {
 	border: 1px solid;
 	border-radius: 5px;
 	font-weight: bold;
@@ -117,6 +123,6 @@ background-color: #8E001C;
 	width: 240px;
 }
 
-#signup  input[type="button"]:hover{
+.signup  input[type="button"]:hover{
 background-color: #8E001C;
 }
