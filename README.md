@@ -2,6 +2,8 @@ Hour Long Lunch
 
 Developed By: Bella Organ, Benton Green, Kelsey Brubaker, Ryan Carney
 
+Hosted at: hour-long-lunch.herokuapp.com
+
 Contents of this File
 -------------------------------
 -Introduction
