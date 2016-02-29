@@ -8,7 +8,7 @@ $(document).ready(function(){
   var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, dayValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
   var storageArray = new Array();
 
-  if(localStorage['storageArray'] == undefined){
+  if(localStorage['storageArray'] === undefined){
    localStorage['storageArray'] = JSON.stringify(storageArray);
  }
 
@@ -40,7 +40,7 @@ $('#sub').click(function() {
           function(results, status) {
               firstLoc = results[0].geometry.location;
               firstLoc = JSON.stringify(firstLoc);
-              firstLoc = firstLoc.replace('(', '')
+              firstLoc = firstLoc.replace('(', '');
               firstLoc = firstLoc.replace(')', '');
               firstLoc = firstLoc.replace('{', '');
               firstLoc = firstLoc.replace('}', '');
@@ -54,7 +54,6 @@ $('#sub').click(function() {
               firstLoc = firstLoc.replace(':', '');
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------
-console.log(firstLoc);
 linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map!</a>';
 
   inputForm.waitTime();
@@ -67,17 +66,9 @@ linkValue = '<a href="https://www.google.com/maps?q=' + firstLoc + '">See on map
    localStorage['storageArray'] = JSON.stringify(storageArray);
    var storedArray = JSON.parse(localStorage['storageArray']);
 
-  for(var i = 0; i < storageArray.length; i++) {
-    $('#unorderedList').append(storedArray[i]);
-  }
-
-  //console.log('Button was clicked');
-  //console.log(spotNameValue);
-  //console.log(spotStreetValue);
-  //console.log(spotCrossValue);
-  //console.log(cuisineValue);
-  //console.log(waitTimeValue);
-  //console.log(ratingValue);
+    for(var i = 0; i < storageArray.length; i++) {
+      $('#unorderedList').append(storedArray[i]);
+    }
   });
 });
 
@@ -96,9 +87,9 @@ InputForm.prototype.waitTime = function() {
   var waitSum = 0;
   for(var i = 0; i < this.waitArray.length; i++) {
     waitSum += this.waitArray[i];
-};
+}
   var waitAvg = waitSum / this.waitArray.length;
-  //console.log('The sum of all the elements is: ' + waitSum + ' The average is: ' + waitAvg);
+  
 };
 
 // Function for averaging user input of score 1-5
@@ -113,6 +104,5 @@ InputForm.prototype.getRating = function() {
   }
 
   var avgRating = ratingSum / this.ratingArray.length;
-  //console.log('The sum of all the elements is: ' + ratingSum + ' The average is: ' + avgRating);
   };
 });
