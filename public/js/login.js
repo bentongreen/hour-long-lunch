@@ -12,8 +12,6 @@ localStorage.setItem('ryan', 'surpriseme');
 	$('#loginButton').click(function(){
 		var username = $('#usernameId').val();
 		var password = $('#passwordId').val();
-		console.log(username);
-		console.log(password);
 
 		if(password === localStorage.getItem(username)){
 			localStorage.setItem('login', 'true');
@@ -26,8 +24,6 @@ localStorage.setItem('ryan', 'surpriseme');
 	$('#submitButton').click(function(){
 		var username2 = $('#newUsername').val();
 		var password2 = $('#newPassword').val();
-		console.log(username2);
-		console.log(password2);
 
 		localStorage.setItem(username2, password2);
 
