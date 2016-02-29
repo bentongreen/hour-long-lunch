@@ -1,0 +1,11 @@
+**/node_modules/**
+README.md
+public/**.html
+package.json
+server.js
+public/css/**
+public/img/**
+favicon.ico
+firebase.json
+LICENSE
+Procfile.txt
