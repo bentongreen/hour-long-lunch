@@ -1,10 +1,10 @@
 'use strict';
 $(document).ready(function(){
 
-  // if(localStorage.getItem('login') != 'true') {
-  //   window.location.href = 'login.html';
-  // }
-  //Event listeners for form input
+  if(localStorage.getItem('login') != 'true') {
+    window.location.href = 'login.html';
+  }
+  Event listeners for form input
   var firstLoc, spotNameValue, spotStreetValue, spotCrossValue, dayValue, cuisineValue, ratingValue, waitTimeValue, linkValue, zoomLevel, latitudeVal, longitudeVal;
   var storageArray = new Array();
 
@@ -89,7 +89,7 @@ $(document).ready(function(){
       waitSum += this.waitArray[i];
     }
     var waitAvg = waitSum / this.waitArray.length;
-    
+
   };
 
   // Function for averaging user input of score 1-5
